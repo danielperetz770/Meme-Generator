@@ -1,0 +1,17 @@
+.canvas-container {
+    display: none;
+    position: relative;
+    /* flex-direction: column; */
+    background-color: no-repeat;
+}
+
+.creator-bg {
+    position: absolute;
+    left: 22rem;
+    z-index: -1;
+    height: 100%;
+    top: 0rem;
+    border-radius: 5rem;
+    opacity: 0.1;
+    background-color: var(--clr-primary--3);
+}

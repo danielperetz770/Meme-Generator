@@ -8,6 +8,10 @@
 
 }
 
+.main-logo .logo {
+    padding-inline-start: 2rem;
+}
+
 .main-nav .logo {
     font-size: 1.355625rem;
     color: var(--clr-primary--4);
@@ -45,6 +49,7 @@
 .main-nav .gallery {
     margin-inline-end: 1.5rem;
 }
+
 
 .gallery:hover,
 .about:hover {

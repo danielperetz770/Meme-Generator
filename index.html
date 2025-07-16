@@ -9,11 +9,9 @@
     <title>Meme-Generator</title>
 </head>
 
-<body>
+<body onload="onInit()">
 
     <main class="meme-generator">
-
-        <h1>Meme-Generator</h1>
 
         <header class="main-header">
             <nav class="main-nav flex clean-list align-center">
@@ -28,15 +26,27 @@
             </nav>
         </header>
 
-        <div class="gallery-container"></div>
-        <input type="text" class="" placeholder="Search" />
+        <section class="gallery-container">
+
+            <input type="text" class="" placeholder="Search" />
+
+            <span>Funny</span><span>Animal</span> <span>Men</span><span>Women</span><span>comoic</span>
+            <span>smile</span>
 
 
-        <span>Funny</span><span>Animal</span> <span>Men</span><span>Women</span><span>comoic</span> <span>smile</span>
+            <section class="meme-gallery"></section>
+        </section>
+        <section class="meme-editor-container">
+            <div class="canvas-container">
 
-        <section class="meme-gallery"></section>
+                <canvas class="main-editor-canvas flex" width="250" height="450"></canvas>
+                <img src="img/creator-bg.png" class="creator-bg" alt="">
+                <div class="editor-tools"></div>
+                <input type="text" class="meme-text" placeholder="Enter Meme Text" oninput="" />
 
-        <canvas width="250" height="450"></canvas>
+            </div>
+        </section>
+
 
     </main>
 

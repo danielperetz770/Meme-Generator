@@ -1,0 +1,22 @@
+.editor-tools {
+    border-radius: 29.83px;
+    background-color: var(--clr-test);
+    padding: 1.5125rem 2.51875rem;
+    position: relative;
+}
+
+.main-editor-canvas {
+    border-radius: 25px;
+    box-shadow: 0.26px 4.99px 5px #0d0e10;
+}
+
+.creator-bg {
+    position: absolute;
+    left: 22rem;
+    z-index: -1;
+    height: 100%;
+    top: 0rem;
+    border-radius: 5rem;
+    opacity: 0.1;
+    background-color: var(--clr-test);
+}
