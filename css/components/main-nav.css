@@ -1,0 +1,53 @@
+.main-nav {
+    background-color: var(--clr-primary-nav-bg);
+    justify-content: space-between;
+    border-radius: 36.5px;
+    height: 4.5625rem;
+    margin: 10px 0px;
+    min-width: 100%;
+
+}
+
+.main-nav .logo {
+    font-size: 1.355625rem;
+    color: var(--clr-primary--4);
+    padding-inline-start: 5.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.main-nav .logo:hover {
+    transform: scale(1.2);
+    color: var(--clr-hover);
+    padding-inline-start: 2rem;
+}
+
+.main-nav .nav-options {
+    justify-content: space-between;
+}
+
+.main-nav .gallery,
+.main-nav .about {
+    color: var(--clr-primary--4);
+    transition: color 0.8s, border-radius 0.8s, background-color 0.8s;
+    border-radius: 30px;
+    line-height: 50px;
+    font-size: 1.301875rem;
+    text-align: center;
+    width: 7.4375rem;
+}
+
+
+.main-nav .about {
+    margin-inline-end: 4.5rem;
+}
+
+.main-nav .gallery {
+    margin-inline-end: 1.5rem;
+}
+
+.gallery:hover,
+.about:hover {
+    background-color: var(--clr-primary--3);
+    color: var(--clr-hover);
+}
