@@ -1,6 +1,7 @@
-'use-strict'
+'use strict'
 
 var gStartPos
+const gTouchEvs = ['touchstart', 'touchmove', 'touchend']
 
 function onInit() {
     renderGalleryImgs()
@@ -67,6 +68,26 @@ function onRemoveLine() {
     renderMeme()
 }
 
+function onMove(ev) {
+    const line = getCurrLine()
+    // console.log(line);
+    if (!line.isDrag) return
+    const pos = getEvPos(ev)
+    //Calc the delta , the diff we moved
+    const dx = pos.x - gStartPos.x
+    // console.log(dx);
+    const dy = pos.y - gStartPos.y
+    // console.log(dy);
+    // moveText(dx, dy)
+    //Save the last pos , we remember where we`ve been and move accordingly
+    gStartPos = pos
+    line.x += dx
+    line.y += dy
+    document.body.style.cursor = 'grabbing'
+    //The canvas is render again after every move
+    renderMeme()
+}
+
 // Move Line By User
 
 function onMoveLine(plusOrMinus) {
@@ -80,8 +101,6 @@ function onSwitchLine() {
     switchLines()
     renderMeme()
 }
-
-
 
 // draw img on canvas
 function drawImage(currImage) {
@@ -109,6 +128,11 @@ function onAlignTxtRight() {
 function onAlignTxtCenter() {
     alignTxtCenter()
     renderMeme()
+}
+
+function onUp() {
+    setTextDrag(false);
+    document.body.style.cursor = 'grab';
 }
 
 function onDown(ev) {

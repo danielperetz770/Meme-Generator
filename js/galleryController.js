@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 
 // render imgs on board
 function renderGalleryImgs() {
@@ -13,11 +13,9 @@ function onImgSelect(imgId) {
     document.querySelector('.meme-editor-container').style.display = 'flex'
     document.querySelector('.meme-gallery').style.display = 'none'
     document.querySelector('.canvas-container').style.display = 'flex'
-    document.querySelector('.filter-by-search-by').style.display = 'none'
-
+    document.querySelector('.filter-by-search-by').style.display = 'none'  // טיפול בתצוגת הפילטר
     renderMeme()
 }
-
 
 // Get Back to homepage //Gallery
 function onReturnToGallery() {
@@ -26,9 +24,9 @@ function onReturnToGallery() {
     document.querySelector('.gallery-container').style.backgroundColor = 'var(--clr-primary-base-1)'
     document.querySelector('.upload-container').style.display = 'none'
     document.querySelector('.meme-text').value = ''
+    document.querySelector('.filter-by-search-by').style.display = 'flex'  // מחזיר להציג את הפילטר
     initMeme()
 }
-
 
 // Toggle Menu
 function onToggleMenu() {

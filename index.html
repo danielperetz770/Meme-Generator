@@ -30,6 +30,7 @@
                         <span class="menu-icon">☰</span>
                     </button>
                 </nav>
+
             </div>
         </header>
 
@@ -50,50 +51,64 @@
 
             <section class="meme-editor-container">
                 <div class="canvas-container">
+
                     <canvas class="main-editor-canvas" width="550" height="598"></canvas>
                     <img src="img/creator-bg.png" class="creator-bg" alt="">
-                    <div class="editor-tools"></div>
-                    <input type="text" class="meme-text" placeholder="Enter Meme Text" oninput="onUpdateTxt(this.value)" />
 
-                    <section class="control-meme-text-container flex content-center">
-                        <div class="btn move-up"><img src="icons/move-up.png" alt="" onclick="onMoveLine(-1)"></div>
-                        <div class="btn move-down"><img src="icons/move-down.png" alt="" onclick="onMoveLine(1)"></div>
-                        <div class="btn switch-lines"><img src="icons/switch-line.png" alt="" onclick="onSwitchLine()"></div>
-                        <div class="btn add-line"><img src="icons/add.png" alt="" onclick="onAddLine()"></div>
-                        <div class="btn delete-line"><img src="icons/delete.png" alt="" onclick="onRemoveLine()"></div>
-                    </section>
+                    <div class="editor-tools">
 
-                    <section class="visual-effects-tool-container">
-                        <div class="btn increse-text"><img src="icons/text-bigger.png" alt="" onclick="onChangeFontSize(1)"></div>
-                        <div class="btn decrease-text"><img src="icons/text-smaller.png" alt="" onclick="onChangeFontSize(-1)"></div>
-                        <div class="btn align-text-left"><img src="icons/Ali-left.png" alt="" onclick="onAlignTxtLeft()"></div>
-                        <div class="btn align-text-middle"><img src="icons/Center.png" alt="" onclick="onAlignTxtCenter()"></div>
-                        <div class="btn align-text-right"><img src="icons/Ali-righ.png" alt="" onclick="onAlignTxtRight()"></div>
-                        <div class="btn drop-down-font">
-                            <select name="fonts" onchange="onChangeFont(this.value)">
-                                <option value="Impact">Impact</option>
-                                <option value="Arial">Arial</option>
-                            </select>
+                        <input type="text" class="meme-text" placeholder="Enter Meme Text"
+                            oninput="onUpdateTxt(this.value)" />
+
+                        <section class="control-meme-text-container flex content-center">
+                            <div class="btn move-up"><img src="icons/move-up.png" alt="" onclick="onMoveLine(-1)"></div>
+                            <div class="btn move-down"><img src="icons/move-down.png" alt="" onclick="onMoveLine(1)"></div>
+                            <div class="btn switch-lines"><img src="icons/switch-line.png" alt=""
+                                    onclick="onSwitchLine()"></div>
+                            <div class="btn add-line"><img src="icons/add.png" alt="" onclick="onAddLine()"></div>
+                            <div class="btn delete-line"><img src="icons/delete.png" alt="" onclick="onRemoveLine()">
+                            </div>
+                        </section>
+
+                        <section class="visual-effects-tool-container">
+                            <div class="btn increse-text"><img src="icons/text-bigger.png" alt=""
+                                    onclick="onChangeFontSize(1)"></div>
+                            <div class="btn decrease-text"><img src="icons/text-smaller.png" alt=""
+                                    onclick="onChangeFontSize(-1)"></div>
+                            <div class="btn align-text-left"><img src="icons/Ali-left.png" alt=""
+                                    onclick="onAlignTxtLeft()"></div>
+                            <div class="btn align-text-middle"><img src="icons/Center.png" alt=""
+                                    onclick="onAlignTxtCenter()"></div>
+                            <div class="btn align-text-right"><img src="icons/Ali-righ.png" alt=""
+                                    onclick="onAlignTxtRight()"></div>
+                            <div class="btn drop-down-font">
+                                <select name="fonts" onchange="onChangeFont(this.value)">
+                                    <option value="Impact">Impact</option>
+                                    <option value="Arial">Arial</option>
+                                </select>
+                            </div>
+                            <div class="btn underline"><img src="icons/Souligne.png" alt=""></div>
+                            <div class="btn change-color">
+                                <label>
+                                    <img src="icons/Color.png" alt="">
+                                    <input type="color" class="color-picker" oninput="onChangeColor(this.value)">
+                                </label>
+                            </div>
+                        </section>
+
+                        <div class="stickers-container"></div>
+
+                        <div class="download-share-section flex">
+                            <a href="#" onclick="uploadImg()" download>
+                                <img class="btn share" src="icons/share-btn.png" alt="">
+                            </a>
+                            <a href="#" onclick="onDownloadCanvas(this)" download>
+                                <img class="btn download" src="icons/download-btn.png" alt="">
+                            </a>
                         </div>
-                        <div class="btn underline"><img src="icons/Souligne.png" alt=""></div>
-                        <div class="btn change-color">
-                            <label>
-                                <img src="icons/Color.png" alt="">
-                                <input type="color" class="color-picker" oninput="onChangeColor(this.value)">
-                            </label>
-                        </div>
-                    </section>
 
-                    <div class="stickers-container"></div>
-
-                    <div class="download-share-section flex">
-                        <a href="#" onclick="uploadImg()" download>
-                            <img class="btn share" src="icons/share-btn.png" alt="">
-                        </a>
-                        <a href="#" onclick="onDownloadCanvas(this)" download>
-                            <img class="btn download" src="icons/download-btn.png" alt="">
-                        </a>
                     </div>
+
                 </div>
             </section>
 

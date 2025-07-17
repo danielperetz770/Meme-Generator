@@ -1,13 +1,13 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--clr-primary-base);
-    width: 100%;
-    margin: 0;
+  background-color: #22252c;
+  width: 100%;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

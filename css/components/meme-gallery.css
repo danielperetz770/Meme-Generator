@@ -1,11 +1,63 @@
+
 .meme-generator {
     padding: 0px 20px;
 }
 
 .gallery-container {
     padding: 2.8125rem 2rem;
-    background-color: var(--clr-primary-base-1);
+    background-color: #383b42;
     border-radius: 10px;
+}
+
+.search-input {
+    background-color: #22252c;
+    border-radius: 29px;
+    width: 33.3%;
+    padding-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.301875rem;
+    border: none;
+    outline: none;
+    font-family: poppins-light;
+    color: white;
+}
+
+input.search-input {
+    background-image: url(/icons/search-icon.png);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 0.5rem;
+}
+
+.filter-by-more-btn-container {
+    flex-grow: 1;
+    height: 3rem;
+    align-items: center;
+}
+
+.sort-by {
+    /* box-sizing: content-box; */
+    width: 10.3%;
+    background-color: var(--clr-primary--1);
+    color: var(--clr-primary--3);
+    border-radius: 50px;
+    flex-grow: 1;
+    font-family: poppins-regular;
+    font-size: 2rem;
+    justify-content: space-around;
+}
+
+.more-btn {
+    height: 2.5rem;
+    border-radius: 18px;
+    font-family: poppins-light;
+    color: var(--clr-primary--3);
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+    padding-block-start: 0.3rem;
+    font-size: 1.19875rem;
+    background: var(--clr-primary-nav-bg);
+    margin-left: 1rem;
 }
 
 .meme-gallery {
@@ -23,6 +75,7 @@
 }
 
 .meme-img:hover {
-  box-shadow: 0px 3px 15px black;
-  transform: translateY(-5px);
+    box-shadow: 0px 3px 15px black;
+    transform: translateY(-5px);
+    filter: saturate(200%);
 }

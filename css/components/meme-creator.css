@@ -1,8 +1,16 @@
+.canvas-container {
+    display: none;
+    position: relative;
+    /* flex-direction: column; */
+    background-color: no-repeat;
+
+}
+
 .editor-tools {
-  border-radius: 29.83px;
-  background-color: #ebeef328;
-  padding: 1.5125rem 2.51875rem;
-  position: relative;
+    border-radius: 29.83px;
+    background-color: #ebeef328;
+    padding: 1.5125rem 2.51875rem;
+    position: relative;
 }
 
 .main-editor-canvas {
@@ -21,57 +29,6 @@
     background-color: var(--clr-primary--2);
 }
 
-.btn {
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.change-color {
-    margin-block-start: 0.2rem;
-}
-
-.change-color input {
-    position: absolute;
-    top: 20rem;
-    z-index: -1;
-    opacity: 0;
-}
-
-.upload-container {
-    padding: 1rem;
-    margin-top: 2rem;
-    background-color: rgba(128, 128, 128, 0.174);
-    text-align: center;
-    font-size: 2rem;
-    font-family: poppins-medium;
-    border-radius: 50px;
-    cursor: pointer;
-    display: none;
-}
-
-.upload-container .share-container a {
-    color: var(--clr-primary-share-container);
-    box-shadow: inset 0px 0px 1px black;
-    padding: 1rem;
-}
-
-.upload-container .share-container {
-    margin-top: 2rem;
-    padding-bottom: 1rem;
-}
-
-.control-meme-text-container {
-    padding-block-start: 1.99375rem;
-}
-
-.control-meme-text-container .btn {
-    padding-left: 1.25rem;
-}
-
 .meme-text {
     height: 3.504375rem;
     width: 27.7763rem;
@@ -82,6 +39,13 @@
     border-radius: 28.04px;
     box-shadow: inset 0px 5px 5px silver;
     box-shadow: 0.26px 4.99px 1px #bbc4d1;
+}
+
+.change-color input {
+    position: absolute;
+    top: 20rem;
+    z-index: -1;
+    opacity: 0;
 }
 
 .visual-effects-tool-container {
@@ -133,10 +97,54 @@
     justify-content: space-between;
 }
 
-.underline {
-    grid-column-start: 4;
+.change-color {
+    margin-block-start: 0.2rem;
 }
 
 .drop-down-font {
     grid-column-start: 1;
+}
+
+.underline {
+    grid-column-start: 4;
+}
+
+.control-meme-text-container {
+    padding-block-start: 1.99375rem;
+}
+
+.control-meme-text-container .btn {
+    padding-left: 1.25rem;
+}
+
+.btn {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.upload-container {
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: rgba(128, 128, 128, 0.174);
+    text-align: center;
+    font-size: 2rem;
+    font-family: poppins-medium;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+.upload-container .share-container a {
+    color: var(--clr-primary-share-container);
+    box-shadow: inset 0px 0px 1px black;
+    padding: 1rem;
+}
+
+.upload-container .share-container {
+    margin-top: 2rem;
+    padding-bottom: 1rem;
 }

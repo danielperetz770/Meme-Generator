@@ -1,4 +1,4 @@
-'use-strict'
+'use strict'
 
 function uploadImg() {
     const imgDataUrl = gElCanvas.toDataURL("image/jpeg");// Gets the canvas content as an image format
