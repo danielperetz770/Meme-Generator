@@ -28,9 +28,14 @@ function initMeme() {
         selectedLineIdx: 0,
         lines: [
             {
-                txt: 'I sometimes eat Falafel',
-                size: 20,
-                color: 'red'
+                txt: 'Enter Meme Text',
+                size: 35,
+                color: 'white',
+                font: 'Impact',
+                x: gElCanvas.width / 4,
+                y: 50,
+                isDrag: false,
+                width: 250,
             },
         ],
     }

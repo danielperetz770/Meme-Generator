@@ -1,0 +1,6 @@
+.canvas-container {
+    display: none;
+    position: relative;
+    /* flex-direction: column; */
+    background-color: no-repeat;
+}

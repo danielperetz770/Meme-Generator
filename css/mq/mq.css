@@ -1,0 +1,228 @@
+/* mobile */
+@media (max-width: 900px) {
+  .main-nav {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .gallery-container {
+    z-index: -1;
+  }
+
+  .main-nav .nav-options {
+    position: fixed;
+    top: 0;
+    min-height: 35%;
+    display: inline-block;
+    background: linear-gradient(90deg, rgba(12, 153, 185, 0.686) 0%, rgba(51, 190, 109, 0.743) 100%);
+    min-width: 100%;
+    padding-block-start: 1rem;
+    transform: translateY(-100%);
+    transition: transform 0.6s, box-shadow 0.6s;
+    line-height: 4.5rem;
+    z-index: 100;
+  }
+
+  body.menu-open .nav-options {
+    transform: translateY(0);
+    box-shadow: 0px 0px 5px rgba(72, 72, 72, 0.617);
+  }
+
+  body.menu-open .menu-toggle {
+    opacity: 0;
+  }
+
+  .main-logo .logo {
+    padding-inline-start: 2rem;
+  }
+
+  .menu-toggle {
+    border: none;
+    margin-inline-end: 2rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+    width: 3rem;
+    background-color: white;
+    border-radius: 50px;
+    color: rgba(51, 190, 109, 0.743);
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+  }
+
+  input.search-input {
+    background-position-x: 95%;
+    background-position-y: 0.5rem;
+  }
+
+  .main-nav .gallery,
+  .about {
+    font-size: 2rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    box-shadow: 0px 0px 5px black;
+  }
+
+  .main-nav .gallery {
+    margin-bottom: 1rem;
+  }
+
+  .filter-by-search-by {
+    flex-direction: column;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .sort-by {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.5rem;
+    width: 100%;
+    margin-right: 2rem;
+  }
+
+  .more-btn {
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    margin-left: -0.5rem;
+  }
+
+  .gallery-container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .meme-generator {
+    padding: 0;
+  }
+
+  .main-editor-canvas {
+    margin-inline-start: 0rem;
+    margin-inline-end: 0rem;
+    z-index: 1;
+  }
+
+  .editor-tools {
+    margin-inline-start: 0rem;
+    margin-block-start: 2rem;
+    padding: 1rem 0.875rem;
+    max-width: 100%;
+  }
+
+  .drop-down-font select {
+    width: 10.5rem;
+  }
+
+  .visual-effects-tool-container {
+    flex-direction: column;
+    width: 100%;
+    grid-template-columns: repeat(5, 39px);
+    padding-inline-end: 2.5rem;
+  }
+
+  .meme-text {
+    max-width: 100%;
+  }
+
+  .stickers-container {
+    font-size: 1.6rem;
+  }
+
+  .download-share-section {
+    flex-direction: column;
+  }
+
+  .download-share-section .share {
+    width: 100%;
+  }
+
+  .download-share-section .download {
+    width: 100%;
+  }
+
+  .control-meme-text-container .btn {
+    margin-left: -1rem;
+  }
+
+  .canvas-container {
+    flex-direction: column;
+    max-width: 100%;
+    z-index: 0;
+  }
+
+  .creator-bg {
+    display: none;
+  }
+
+  .meme-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 0.2rem;
+  }
+
+  .upload-container {
+    font-size: 0.9rem;
+  }
+}
+
+/* small */
+@media (min-width: 780px) {
+  .main-layout {
+    max-width: 740px;
+    margin: 0 auto;
+  }
+}
+
+/* medium */
+@media (min-width: 900px) {
+  .main-layout {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .canvas-container {
+    flex-direction: column;
+  }
+
+  .main-editor-canvas {
+    margin-inline-start: 12rem;
+  }
+
+  .editor-tools {
+    margin-inline-start: 12rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .creator-bg {
+    display: none;
+  }
+}
+
+/* large */
+
+@media (min-width: 1020px) {
+  .main-layout {
+    max-width: 980px;
+  }
+
+  .canvas-container {
+    flex-direction: row;
+    max-width: 100%;
+    z-index: 1;
+  }
+
+  .main-editor-canvas {
+    margin-inline-start: 22.9rem;
+    margin-inline-end: 1rem;
+  }
+
+  .editor-tools {
+    margin-inline-start: 0rem;
+  }
+}

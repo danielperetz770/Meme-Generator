@@ -13,5 +13,24 @@ function onImgSelect(imgId) {
     document.querySelector('.meme-editor-container').style.display = 'flex'
     document.querySelector('.meme-gallery').style.display = 'none'
     document.querySelector('.canvas-container').style.display = 'flex'
+    document.querySelector('.filter-by-search-by').style.display = 'none'
+
     renderMeme()
+}
+
+
+// Get Back to homepage //Gallery
+function onReturnToGallery() {
+    document.querySelector('.meme-gallery').style.display = 'grid'
+    document.querySelector('.meme-editor-container').style.display = 'none'
+    document.querySelector('.gallery-container').style.backgroundColor = 'var(--clr-primary-base-1)'
+    document.querySelector('.upload-container').style.display = 'none'
+    document.querySelector('.meme-text').value = ''
+    initMeme()
+}
+
+
+// Toggle Menu
+function onToggleMenu() {
+    document.body.classList.toggle('menu-open')
 }
