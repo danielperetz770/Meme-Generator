@@ -2,135 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png" type="image/png" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Meme-Generator</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/616/616408.png" type="image/png" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Meme-Generator</title>
 </head>
 
 <body onload="onInit()">
 
-    <div class="main-screen" onclick="onToggleMenu()"></div>
+  <div class="main-screen" onclick="onToggleMenu()"></div>
 
-    <main class="meme-generator">
+  <main class="meme-generator">
 
-        <header class="main-header">
-            <div class="main-layout flex align-center">
+    <header class="main-header">
+      <div class="main-layout flex align-center">
 
-                <nav class="main-nav flex clean-list align-center">
-                    <div class="main-logo">
-                        <a href="#" class="logo" onclick="onReturnToGallery()">Meme-Generator</a>
-                    </div>
-                    <div class="nav-options flex">
-                        <a href="#" class="gallery" onclick="onReturnToGallery()">Gallery</a>
-                        <a href="#" class="about">About</a>
-                    </div>
-                    <button onclick="onToggleMenu()" class="menu-toggle">
-                        <span class="menu-icon">☰</span>
-                    </button>
-                </nav>
+        <nav class="main-nav flex clean-list align-center">
+          <div class="main-logo">
+            <a href="#" class="logo" onclick="onReturnToGallery()">Meme-Generator</a>
+          </div>
+          <div class="nav-options flex">
+            <a href="#" class="gallery" onclick="onReturnToGallery()">Gallery</a>
+            <a href="#" class="about">About</a>
+          </div>
+          <button onclick="onToggleMenu()" class="menu-toggle">
+            <span class="menu-icon">☰</span>
+          </button>
+        </nav>
 
-            </div>
-        </header>
+      </div>
+    </header>
 
-        <div class="gallery-container">
+    <div class="gallery-container">
 
-            <div class="filter-by-search-by flex">
-                <input type="text" class="search-input" placeholder="Search" />
-                <div class="filter-by-more-btn-container flex">
-                    <div class="sort-by flex">
-                        <span>Funny</span><span>Men</span><span>Animal</span>
-                        <span>Comic</span><span>Women</span><span>Smile</span>
-                    </div>
-                    <div class="more-btn">More</div>
-                </div>
-            </div>
+      <div class="filter-by-search-by flex">
+        <input type="text" class="search-input" placeholder="Search" />
+        <div class="filter-by-more-btn-container flex">
+          <div class="sort-by flex">
+            <span>Funny</span><span>Men</span><span>Animal</span>
+            <span>Comic</span><span>Women</span><span>Smile</span>
+          </div>
+          <div class="more-btn">More</div>
+        </div>
+      </div>
 
-            <section class="meme-gallery"></section>
+      <section class="meme-gallery"></section>
 
-            <section class="meme-editor-container">
-                <div class="canvas-container">
+      <section class="meme-editor-container">
+        <div class="canvas-container">
 
-                    <canvas class="main-editor-canvas" width="550" height="598"></canvas>
-                    <img src="img/creator-bg.png" class="creator-bg" alt="">
+          <canvas class="main-editor-canvas" width="550" height="598"></canvas>
+          <img src="img/creator-bg.png" class="creator-bg" alt="">
 
-                    <div class="editor-tools">
+          <div class="editor-tools">
 
-                        <input type="text" class="meme-text" placeholder="Enter Meme Text"
-                            oninput="onUpdateTxt(this.value)" />
+            <input type="text" class="meme-text" placeholder="Enter Meme Text" oninput="onUpdateTxt(this.value)" />
 
-                        <section class="control-meme-text-container flex content-center">
-                            <div class="btn move-up"><img src="icons/move-up.png" alt="" onclick="onMoveLine(-1)"></div>
-                            <div class="btn move-down"><img src="icons/move-down.png" alt="" onclick="onMoveLine(1)">
-                            </div>
-                            <div class="btn switch-lines"><img src="icons/switch-line.png" alt=""
-                                    onclick="onSwitchLine()"></div>
-                            <div class="btn add-line"><img src="icons/add.png" alt="" onclick="onAddLine()"></div>
-                            <div class="btn delete-line"><img src="icons/delete.png" alt="" onclick="onRemoveLine()">
-                            </div>
-                        </section>
-
-                        <section class="visual-effects-tool-container">
-                            <div class="btn increse-text"><img src="icons/text-bigger.png" alt=""
-                                    onclick="onChangeFontSize(1)"></div>
-                            <div class="btn decrease-text"><img src="icons/text-smaller.png" alt=""
-                                    onclick="onChangeFontSize(-1)"></div>
-                            <div class="btn align-text-left"><img src="icons/Ali-left.png" alt=""
-                                    onclick="onAlignTxtLeft()"></div>
-                            <div class="btn align-text-middle"><img src="icons/Center.png" alt=""
-                                    onclick="onAlignTxtCenter()"></div>
-                            <div class="btn align-text-right"><img src="icons/Ali-righ.png" alt=""
-                                    onclick="onAlignTxtRight()"></div>
-                            <div class="btn drop-down-font">
-                                <select name="fonts" onchange="onChangeFont(this.value)">
-                                    <option value="Impact">Impact</option>
-                                    <option value="Arial">Arial</option>
-                                </select>
-                            </div>
-                            <div class="btn underline"><img src="icons/Souligne.png" alt=""></div>
-                            <div class="btn change-color">
-                                <label>
-                                    <img src="icons/Color.png" alt="">
-                                    <input type="color" class="color-picker" oninput="onChangeColor(this.value)">
-                                </label>
-                            </div>
-                        </section>
-
-                        <div class="stickers-container"></div>
-
-                        <div class="download-share-section flex">
-                            <a href="#" onclick="uploadImg()" download>
-                                <img class="btn share" src="icons/share-btn.png" alt="">
-                            </a>
-                            <a href="#" onclick="onDownloadCanvas(this)" download>
-                                <img class="btn download" src="icons/download-btn.png" alt="">
-                            </a>
-                        </div>
-
-                    </div>
-
-                </div>
+            <section class="control-meme-text-container flex content-center">
+              <div class="btn move-up"><img src="icons/move-up.png" alt="" onclick="onMoveLine(-1)"></div>
+              <div class="btn move-down"><img src="icons/move-down.png" alt="" onclick="onMoveLine(1)">
+              </div>
+              <div class="btn switch-lines"><img src="icons/switch-line.png" alt="" onclick="onSwitchLine()"></div>
+              <div class="btn add-line"><img src="icons/add.png" alt="" onclick="onAddLine()"></div>
+              <div class="btn delete-line"><img src="icons/delete.png" alt="" onclick="onRemoveLine()">
+              </div>
             </section>
 
-            <section class="upload-container">
-                <div class="user-msg"></div>
-                <div class="share-container"></div>
+            <section class="visual-effects-tool-container">
+              <div class="btn increse-text"><img src="icons/text-bigger.png" alt="" onclick="onChangeFontSize(1)"></div>
+              <div class="btn decrease-text"><img src="icons/text-smaller.png" alt="" onclick="onChangeFontSize(-1)">
+              </div>
+              <div class="btn align-text-left"><img src="icons/Ali-left.png" alt="" onclick="onAlignTxtLeft()"></div>
+              <div class="btn align-text-middle"><img src="icons/Center.png" alt="" onclick="onAlignTxtCenter()"></div>
+              <div class="btn align-text-right"><img src="icons/Ali-righ.png" alt="" onclick="onAlignTxtRight()"></div>
+              <div class="btn drop-down-font">
+                <select name="fonts" onchange="onChangeFont(this.value)">
+                  <option value="Impact">Impact</option>
+                  <option value="Arial">Arial</option>
+                </select>
+              </div>
+              <div class="btn underline"><img src="icons/Souligne.png" alt=""></div>
+              <div class="btn change-color">
+                <label>
+                  <img src="icons/Color.png" alt="">
+                  <input type="color" class="color-picker" oninput="onChangeColor(this.value)">
+                </label>
+              </div>
             </section>
+
+            <div class="stickers-container"></div>
+
+            <div class="download-share-section flex">
+              <a href="#" onclick="uploadImg()" download>
+                <img class="btn share" src="icons/share-btn.png" alt="">
+              </a>
+              <a href="#" onclick="onDownloadCanvas(this)" download>
+                <img class="btn download" src="icons/download-btn.png" alt="">
+              </a>
+            </div>
+
+          </div>
 
         </div>
+      </section>
 
-    </main>
+      <section class="upload-container">
+        <div class="user-msg"></div>
+        <div class="share-container"></div>
+      </section>
 
-    <script src="js/memeController.js"></script>
-    <script src="js/galleryController.js"></script>
-    <script src="js/uploadAndDownloadController.js"></script>
+    </div>
 
-    <script src="js/service/storage.service.js"></script>
-    <script src="js/service/util.service.js"></script>
-    <script src="js/service/memeService.js"></script>
-    <script src="js/service/galleryService.js"></script>
+  </main>
+
+  <footer class="main-footer">
+    <div class="main-layout flex align-center space-between">
+      <p>&copy; 2025 Meme Generator. All rights reserved Daniel Peretz</p>
+      <div class="footer-links flex">
+        <a href="https://www.facebook.com/dny.l.prz.488775">Facebook</a>
+        <a href="https://www.instagram.com/daniel_peretz5/">Instengram</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/memeController.js"></script>
+  <script src="js/galleryController.js"></script>
+  <script src="js/uploadAndDownloadController.js"></script>
+
+  <script src="js/service/storage.service.js"></script>
+  <script src="js/service/util.service.js"></script>
+  <script src="js/service/memeService.js"></script>
+  <script src="js/service/galleryService.js"></script>
 
 </body>
 

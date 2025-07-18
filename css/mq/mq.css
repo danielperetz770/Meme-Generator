@@ -42,9 +42,9 @@
     font-size: 1.9rem;
     font-weight: bold;
     width: 3rem;
-    background-color: white;
+    background-color: var(--clr-primary--3);
     border-radius: 50px;
-    color: rgba(51, 190, 109, 0.743);
+    color: var(--clr-primary-menu-toggle);
     padding: 0.2rem 0.5rem;
     cursor: pointer;
   }

@@ -8,7 +8,10 @@
 @import 'basic/helpers.css';
 
 /* COMPONENTS */
-@import 'components/main-nav.css';
+@import 'components/main-header.css';
 @import 'components/meme-gallery.css';
 @import 'components/meme-creator.css';
-@import 'components/main-screen.css';
+@import 'components/screen.css';
+
+/* Media Queries */
+@import 'mq/mq.css';

@@ -1,81 +1,134 @@
-
 .meme-generator {
-    padding: 0px 20px;
+  padding: 0px 20px;
 }
 
 .gallery-container {
-    padding: 2.8125rem 2rem;
-    background-color: #383b42;
-    border-radius: 10px;
+  padding: 2.8125rem 2rem;
+  background-color: var(--clr-primary-gallery-container);
+  border-radius: 10px;
 }
 
 .search-input {
-    background-color: #22252c;
-    border-radius: 29px;
-    width: 33.3%;
-    padding-left: 1rem;
-    margin-right: 1rem;
-    font-size: 1.301875rem;
-    border: none;
-    outline: none;
-    font-family: poppins-light;
-    color: white;
+  background-color: var(--clr-primary-search-input);
+  border-radius: 29px;
+  width: 33.3%;
+  padding-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.301875rem;
+  border: none;
+  outline: none;
+  font-family: poppins-light;
+  color: var(--clr-primary--3);
 }
 
 input.search-input {
-    background-image: url(/icons/search-icon.png);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 0.5rem;
+  background-image: url(/icons/search-icon.png);
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 0.5rem;
 }
 
 .filter-by-more-btn-container {
-    flex-grow: 1;
-    height: 3rem;
-    align-items: center;
+  flex-grow: 1;
+  height: 3rem;
+  align-items: center;
 }
 
 .sort-by {
-    /* box-sizing: content-box; */
-    width: 10.3%;
-    background-color: var(--clr-primary--1);
-    color: var(--clr-primary--3);
-    border-radius: 50px;
-    flex-grow: 1;
-    font-family: poppins-regular;
-    font-size: 2rem;
-    justify-content: space-around;
+  /* box-sizing: content-box; */
+  width: 10.3%;
+  background-color: var(--clr-primary-sort-by);
+  color: var(--clr-primary--3);
+  border-radius: 50px;
+  flex-grow: 1;
+  font-family: poppins-regular;
+  font-size: 2rem;
+  justify-content: space-around;
 }
 
 .more-btn {
-    height: 2.5rem;
-    border-radius: 18px;
-    font-family: poppins-light;
-    color: var(--clr-primary--3);
-    padding-inline-start: 2rem;
-    padding-inline-end: 2rem;
-    padding-block-start: 0.3rem;
-    font-size: 1.19875rem;
-    background: var(--clr-primary-nav-bg);
-    margin-left: 1rem;
+  height: 2.5rem;
+  border-radius: 18px;
+  font-family: poppins-light;
+  color: var(--clr-primary--3);
+  padding-inline-start: 2rem;
+  padding-inline-end: 2rem;
+  padding-block-start: 0.3rem;
+  font-size: 1.19875rem;
+  background: linear-gradient(90deg, rgba(12, 152, 185, 1) 0%, rgba(51, 190, 109, 1) 100%);
+  margin-left: 1rem;
 }
 
 .meme-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    grid-gap: 20px;
-    padding: 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 20px;
+  padding: 2rem 2rem;
 }
 
 .meme-img {
-    max-width: 100%;
-    border-radius: 10px;
-    transition: 0.5s;
-    cursor: pointer;
+  max-width: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .meme-img:hover {
-    box-shadow: 0px 3px 15px black;
-    transform: translateY(-5px);
-    filter: saturate(200%);
+  box-shadow: 0px 3px 15px black;
+  transform: translateY(-5px);
+  /* filter: saturate(200%); */
+}
+
+.main-footer {
+  background: linear-gradient(90deg, rgba(12, 152, 185, 1) 0%, rgba(51, 190, 109, 1) 100%);
+  border-radius: 36.5px 36.5px 0 0;
+  height: 4.5625rem;
+  margin: 10px 0 0 0;
+  font-family: poppins-medium;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: var(--clr-primary--3);
+  font-size: 1rem;
+}
+
+.main-footer p {
+  margin: 0;
+}
+
+.main-footer .footer-links a {
+  color: var(--clr-primary--4);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  border-radius: 30px;
+  padding: 0.3rem 0.8rem;
+  transition: background-color 0.8s, color 0.8s;
+  cursor: pointer;
+}
+
+.main-footer .footer-links a:hover {
+  background-color: var(--clr-primary--3);
+  color: var(--clr-hover);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.main-footer {
+  flex-shrink: 0;
 }

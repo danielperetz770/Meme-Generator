@@ -9,11 +9,18 @@
 
     --clr-primary-nav-bg: #5970C1;
     --clr-primary-nav-bg-1: #32a8cc;
+    --clr-primary-menu-toggle: rgba(51, 190, 109, 0.743);
+    --clr-primary-editor-tools: #ebeef328;
+    --clr-primary-sort-by: #c2c2c2b6;
+    --clr-primary-search-input: #22252c;
 
     --clr-primary-sticker-1: #707070;
-    --clr-primary-sticker: #8076fd;
     --clr-primary-share-container: #0066ff;
+    --clr-primary-gallery-container: #383b42;
+    --clr-primary-stickers-container: #8076fd;
+    --clr-primary-upload-container: rgba(128, 128, 128, 0.174);
+    --clr-primary-visual-effects-tool-container: #19a59f;
 
-    --clr-hover: #21AC91;
+    --clr-hover: #00f2ca;
     --clr-test: #ef0d0d;
 }

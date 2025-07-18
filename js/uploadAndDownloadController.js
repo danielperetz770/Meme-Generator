@@ -1,5 +1,19 @@
 'use strict'
 
+function onDownloadCanvas(elLink) {
+    gIsDownload = true;
+    renderCanvas()
+    gIsDownload = false;
+    //protect the image soo attacker could not download imgs from diff domain
+    const data = gElCanvas.toDataURL()// for security reason you can`t do toDataUrl on tainted canvas
+    //This protects users from having private data exposed by using images
+    // to pull information from remote web sites without permission.
+    elLink.href = data
+    elLink.download = 'my-img.jpg'
+}
+
+
+
 function uploadImg() {
     const imgDataUrl = gElCanvas.toDataURL("image/jpeg");// Gets the canvas content as an image format
     document.querySelector('.upload-container').style.display = 'block'
@@ -37,16 +51,4 @@ function doUploadImg(imgDataUrl, onSuccess) {
         .catch((err) => {
             console.error(err)
         })
-}
-
-function onDownloadCanvas(elLink) {
-    gIsDownload = true;
-    renderMeme()
-    gIsDownload = false;
-    //protect the image soo attacker could not download imgs from diff domain
-    const data = gElCanvas.toDataURL()// for security reason you can`t do toDataUrl on tainted canvas
-    //This protects users from having private data exposed by using images
-    // to pull information from remote web sites without permission.
-    elLink.href = data
-    elLink.download = 'my-img.jpg'
 }

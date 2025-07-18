@@ -1,5 +1,6 @@
 'use strict'
-var gImgs = [
+
+const gImgs = [
     { id: 1, url: 'img/1.jpg', keywords: ['funny', 'cat'] },
     { id: 2, url: 'img/2.jpg', keywords: ['funny', 'cat'] },
     { id: 3, url: 'img/3.jpg', keywords: ['funny', 'cat'] },
@@ -18,12 +19,24 @@ var gImgs = [
     { id: 16, url: 'img/16.jpg', keywords: ['funny', 'cat'] },
     { id: 17, url: 'img/17.jpg', keywords: ['funny', 'cat'] },
     { id: 18, url: 'img/18.jpg', keywords: ['funny', 'cat'] },
-]
+];
 
+
+
+// find the clicked img id
+function getCurrentImg(imgId) {
+    return gImgs.find((img) => img.id === imgId)
+}
+
+
+// get images array
+function getImages() {
+    return gImgs
+}
 
 function initMeme() {
     gMeme = {
-        selectedImgId: 5,
+        selectedImgId: 1,
         selectedLineIdx: 0,
         lines: [
             {
@@ -38,16 +51,4 @@ function initMeme() {
             },
         ],
     }
-}
-
-var gKeywordSearchCountMap = { 'funny': 12, 'cat': 16, 'baby': 2 }
-
-// find the clicked img id
-function getCurrentImg(imgId) {
-    return gImgs.find((img) => img.id === imgId)
-}
-
-// get images array
-function getImages() {
-    return gImgs
-}
+} 
