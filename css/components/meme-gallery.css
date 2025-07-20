@@ -61,7 +61,8 @@ input.search-input {
 
 .meme-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); */
   grid-gap: 20px;
   padding: 2rem 2rem;
 }

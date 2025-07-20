@@ -136,9 +136,7 @@
     flex-direction: column;
   }
 
-  .download-share-section .share {
-    width: 100%;
-  }
+  .download-share-section .share,
   .download-share-section .download {
     width: 100%;
   }
@@ -164,6 +162,35 @@
 
   .upload-container {
     font-size: 0.9rem;
+  }
+
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0;
+    font-size: 1rem;
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .main-footer p {
+    margin-bottom: 0.5rem;
+  }
+
+  .main-footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .main-footer .footer-links a {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
   }
 }
 
@@ -197,13 +224,13 @@
   .menu-toggle {
     display: none;
   }
+
   .creator-bg {
     display: none;
   }
 }
 
 /* large */
-
 @media (min-width: 1020px) {
   .main-layout {
     max-width: 980px;

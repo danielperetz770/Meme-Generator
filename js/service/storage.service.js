@@ -1,11 +1,10 @@
 'use strict'
 
 function saveToStorage(key, val) {
-    const strVal = JSON.stringify(val)
-    localStorage.setItem(key, strVal)
+    localStorage.setItem(key, JSON.stringify(val))
 }
 
 function loadFromStorage(key) {
-    var val = localStorage.getItem(key)
+    const val = localStorage.getItem(key)
     return JSON.parse(val)
 }

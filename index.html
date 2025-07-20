@@ -11,7 +11,6 @@
 </head>
 
 <body onload="onInit()">
-
   <div class="main-screen" onclick="onToggleMenu()"></div>
 
   <main class="meme-generator">
@@ -38,7 +37,7 @@
     <div class="gallery-container">
 
       <div class="filter-by-search-by flex">
-        <input type="text" class="search-input" placeholder="Search" />
+        <input type="text" class="search-input" placeholder="Search" oninput="onSetFilterBy(this)" />
         <div class="filter-by-more-btn-container flex">
           <div class="sort-by flex">
             <span>Funny</span><span>Men</span><span>Animal</span>
@@ -132,6 +131,7 @@
   <script src="js/galleryController.js"></script>
   <script src="js/uploadAndDownloadController.js"></script>
 
+  <script src="js/service/storage.service.js"></script>
   <script src="js/service/storage.service.js"></script>
   <script src="js/service/util.service.js"></script>
   <script src="js/service/memeService.js"></script>
